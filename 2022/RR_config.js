@@ -60,9 +60,15 @@ var config_data = `
     },
     "auton": {
       "Taxi": {
-        "code":"at",
+        "code":"ata",
         "title": "Taxied?",
-        "type":"bool"
+        "type":"radio",
+        "choices":{
+          "s":"Succesful<br>",
+          "a":"Attempted<br>",
+          "x":"Not Observed"
+        },
+        "defaultValue":"x"
       },
       "Upper Cargo Scored": {
         "code":"au",
@@ -73,6 +79,11 @@ var config_data = `
         "code":"al",
         "title": "Lower Cargo Scored",
         "type":"counter"
+      },
+      "Attempted shots that missed": {
+        "code":"asf",
+        "title": "Missed shots?",
+        "type":"bool"
       },
       "Aquired Additional Cargo": {
         "code":"ac",
@@ -94,6 +105,28 @@ var config_data = `
       "Was Defended": {
         "code":"wd",
         "title": "Was Defended",
+        "type":"bool"
+      },
+      "Ability to play defense (if played defense)": {
+        "code":"dr",
+        "title": "Defense Rating",
+        "type":"radio",
+        "choices":{
+          "n":"Not Effective<br>",
+          "a":"Average<br>",
+          "v":"Very Effective<br>",
+          "x":"Not Observed"
+        },
+        "defaultValue":"x"
+      },
+      "Died/Tipped": {
+        "code":"d",
+        "title": "Died/Tipped",
+        "type":"bool"
+      },
+      "Penalized": {
+        "code":"pf",
+        "title": "Did something to get a penalty?",
         "type":"bool"
       },
       "Shooting Spot": {
@@ -143,28 +176,6 @@ var config_data = `
           "x":"Not Observed"
         },
         "defaultValue":"x"
-      },
-      "Defense Rating": {
-        "code":"dr",
-        "title": "Defense Rating",
-        "type":"radio",
-        "choices":{
-          "n":"Not Effective<br>",
-          "a":"Average<br>",
-          "v":"Very Effective<br>",
-          "x":"Not Observed"
-        },
-        "defaultValue":"x"
-      },
-      "Died/Tipped": {
-        "code":"d",
-        "title": "Died/Tipped",
-        "type":"bool"
-      },
-      "Penalized": {
-        "code":"pf",
-        "title": "Did something to get a penalty?",
-        "type":"bool"
       },
       "Make good alliance partner?": {
         "code":"all",
