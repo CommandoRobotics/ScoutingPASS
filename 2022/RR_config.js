@@ -14,7 +14,7 @@ var config_data = `
       "Event":{
         "code":"e",
         "type":"event",
-        "defaultValue":"2022okok",
+        "defaultValue":"2022oktu",
         "required":"true",
         "disabled":"true"
       },
