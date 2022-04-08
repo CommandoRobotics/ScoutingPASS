@@ -177,10 +177,16 @@ var config_data = `
         },
         "defaultValue":"x"
       },
-      "Make good alliance partner?": {
+      "Good alliance partner?": {
         "code":"all",
-        "title": "Make good alliance partner?",
-        "type":"bool"
+        "title": "Good alliance partner (would pick)?",
+        "type":"radio",
+        "choices":{
+          "n":"No<br>",
+          "m":"Netural<br>",
+          "y":"Yes<br>"
+        },
+        "defaultValue":"m"
       },
       "Comments": {
         "code":"co",
