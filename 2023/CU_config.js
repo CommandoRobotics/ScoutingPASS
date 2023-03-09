@@ -14,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2022carv",
+      "defaultValue": "2022arli",
       "required": "true",
       "disabled": "true"
     },
@@ -75,15 +75,7 @@ var config_data = `
       "showUndo": "false",
       "shape": "circle 12 black red true"
     },
-    { "name": "Crossed Cable",
-      "code": "acc",
-      "type": "bool"
-    },
-    { "name": "Crossed Charging Station",
-      "code": "acs",
-      "type": "bool"
-    },
-    { "name": "Mobility?",
+    { "name": "Mobility (crossed alliance line)",
       "code": "am",
       "type": "bool"
     },
@@ -116,25 +108,8 @@ var config_data = `
       "shape": "circle 12 black red true",
       "cycleTimer": "tct"
     },
-    { "name": "Feeder Count<br>(Fed another bot)",
-      "code": "tfc",
-      "type": "counter",
-      "cycleTimer": "tct"
-    },
-    { "name": "Was Fed<br>Game Pieces",
-      "code": "wf",
-      "type": "bool"
-    },
     { "name": "Was Defended",
       "code": "wd",
-      "type": "bool"
-    },
-    { "name": "Who Defended this bot",
-      "code": "who",
-      "type": "text"
-    },
-    { "name": "Smart Placement<br>(creates Links)",
-      "code": "lnk",
       "type": "bool"
     },
     { "name": "Floor Pickup",
@@ -165,14 +140,6 @@ var config_data = `
         "x": "Not attempted"
       },
       "defaultValue": "x"
-    },
-    { "name": "Total # of alliance<br>robots docked/engaged",
-      "code": "dn",
-      "type": "counter"
-    },
-    { "name": "Links Scored",
-      "code": "ls",
-      "type": "counter"
     }
   ],
   "postmatch": [
@@ -180,7 +147,7 @@ var config_data = `
       "code": "ds",
       "type": "radio",
       "choices": {
-        "n": "Not Effective<br>",
+        "n": "Not Effective (trouble driving or scoring)<br>",
         "a": "Average<br>",
         "v": "Very Effective<br>",
         "x": "Not Observed"
@@ -191,27 +158,21 @@ var config_data = `
       "code": "dr",
       "type": "radio",
       "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
-        "e": "Excellent<br>",
+        "b": "Bad: Got in way of teammates<br>",
+        "m": "Meh: Didn't slow anyone down<br>",
+        "g": "Good: Got in way of opponents<br>",
+        "e": "Excellent: Pushed opponents<br>",
         "x": "Did not play defense"
       },
       "defaultValue": "x"
-    },
-    { "name": "Swerve drive?",
-      "code": "sd",
-      "type": "bool"
     },
     { "name": "Speed Rating",
       "code": "sr",
       "type": "radio",
       "choices": {
-        "1": "1 (slow)<br>",
-        "2": "2<br>",
-        "3": "3<br>",
-        "4": "4<br>",
-        "5": "5 (fast)"
+        "1": "1 (Way slower than average)<br>",
+        "2": "2 (Average)<br>",
+        "3": "3 (Way faster than average)"
       },
       "defaultValue":"3"
     },
@@ -219,11 +180,7 @@ var config_data = `
       "code": "die",
       "type": "bool"
     },
-    { "name": "Tippy<br>(almost tipped over)",
-      "code": "tip",
-      "type": "bool"
-    },
-    { "name": "Dropped Cones (>2)",
+    { "name": "Dropped Several Cones (>2)",
       "code": "dc",
       "type": "bool"
     },
