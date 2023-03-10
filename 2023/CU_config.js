@@ -14,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2022arli",
+      "defaultValue": "2023okok",
       "required": "true",
       "disabled": "true"
     },
@@ -143,17 +143,6 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Driver Skill",
-      "code": "ds",
-      "type": "radio",
-      "choices": {
-        "n": "Not Effective (trouble driving or scoring)<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
-        "x": "Not Observed"
-      },
-      "defaultValue": "x"
-    },
     { "name": "Defense Rating",
       "code": "dr",
       "type": "radio",
@@ -176,7 +165,7 @@ var config_data = `
       },
       "defaultValue":"3"
     },
-    { "name": "Died/Immobilized",
+    { "name": "Died/Tipped",
       "code": "die",
       "type": "bool"
     },
@@ -184,7 +173,7 @@ var config_data = `
       "code": "dc",
       "type": "bool"
     },
-    { "name": "Make good<br>alliance partner?",
+    { "name": "Good alliance partner?",
       "tooltip": "Would you want this robot on your alliance in eliminations?",
       "code": "all",
       "type": "bool"
