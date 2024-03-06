@@ -1,0 +1,3 @@
+# Ignore MAC os directory meta file
+.DS_Store
+
