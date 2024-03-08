@@ -76,7 +76,7 @@ var config_data = `
     { "name": "Speaker Scores",
       "code": "ass",
       "type": "counter"
-    }
+    },
     { "name": "Grabbed (or attempted to) Note from center line",
       "code": "agc",
       "type": "bool"
