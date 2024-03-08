@@ -80,7 +80,7 @@ var config_data = `
     { "name": "Grabbed (or attempted to) Note from center line",
       "code": "agc",
       "type": "bool"
-    },
+    }
   ],
   "teleop": [
     { "name": "Amp Scores",
