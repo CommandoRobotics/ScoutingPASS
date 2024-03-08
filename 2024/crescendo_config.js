@@ -65,7 +65,7 @@ var config_data = `
     }
   ],
   "auton": [
-    { "name": "Leave Starting Zone",
+    { "name": "Robot moved out of starting zone (past alliance colored line)",
       "code": "al",
       "type": "bool"
     },
@@ -77,6 +77,10 @@ var config_data = `
       "code": "ass",
       "type": "counter"
     }
+    { "name": "Grabbed (or attempted to) Note from center line",
+      "code": "agc",
+      "type": "bool"
+    },
   ],
   "teleop": [
     { "name": "Amp Scores",
@@ -85,10 +89,6 @@ var config_data = `
     },
     { "name": "Speaker Scores",
       "code": "tss",
-      "type": "counter"
-    },
-    { "name": "Times Amplified",
-      "code": "tta",
       "type": "counter"
     },
     { "name": "Pickup From",
@@ -101,27 +101,26 @@ var config_data = `
         "x": "Not Attempted"
       },
       "defaultValue": "x"
-    }
+    },
+    { "name": "Passed (shot) Notes across the field to their side.",
+      "code": "tpa",
+      "type": "bool"
+    },
   ],
   "endgame": [
-    { "name": "Stage Timer",
-      "code": "dt",
-      "type": "timer"
-    },
     { "name": "Final Status",
       "code": "fs",
       "type":"radio",
       "choices": {
-        "p": "Parked<br>",
-        "o": "Onstage<br>",
-        "s": "Onstage (Spotlit)<br>",
-        "h": "Harmony<br>",
+        "p": "Parked (in stage zone)<br>",
+        "o": "Onstage (climbed)<br>",
+        "h": "Harmony (on same chain as another bot)<br>",
         "a": "Attempted but failed<br>",
         "x": "Not attempted"
       },
       "defaultValue": "x"
     },
-    { "name": "Note in Trap",
+    { "name": "Placed Note in Trap",
       "code": "nit",
       "type": "bool"
     }
@@ -142,10 +141,10 @@ var config_data = `
       "code": "dr",
       "type": "radio",
       "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
-        "e": "Excellent<br>",
+        "b": "Poor (little to no effect on other robots)<br>",
+        "a": "Average (slowed teams getting wher they wanted)<br>",
+        "g": "Good (repeatedly pused robots away from their targets) <br>",
+        "e": "Excellent (simultaneouly prevented multiple robots from scoring)<br>",
         "x": "Did not play defense"
       },
       "defaultValue": "x"
@@ -154,11 +153,9 @@ var config_data = `
       "code": "sr",
       "type": "radio",
       "choices": {
-        "1": "1 (slow)<br>",
-        "2": "2<br>",
-        "3": "3<br>",
-        "4": "4<br>",
-        "5": "5 (fast)"
+        "1": "1 (very slow)<br>",
+        "3": "3 (average)<br>",
+        "5": "5 (impressively fast)"
       },
       "defaultValue":"3"
     },
@@ -166,12 +163,8 @@ var config_data = `
       "code": "die",
       "type": "bool"
     },
-    { "name": "Tippy<br>(almost tipped over)",
-      "code": "tip",
-      "type": "bool"
-    },
-    { "name": "Dropped Notes (>2)",
-      "code": "dn",
+    { "name": "Driver moved aimlessly",
+      "code": "dizzy",
       "type": "bool"
     },
     { "name": "Make good<br>alliance partner?",
