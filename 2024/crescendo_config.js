@@ -105,7 +105,7 @@ var config_data = `
     { "name": "Passed (shot) Notes across the field to their side.",
       "code": "tpa",
       "type": "bool"
-    },
+    }
   ],
   "endgame": [
     { "name": "Final Status",
