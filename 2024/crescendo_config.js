@@ -15,7 +15,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2024oktu",
+      "defaultValue": "2024okok",
       "required": "true"
     },
     { "name": "Match Level",
