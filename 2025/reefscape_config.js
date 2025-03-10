@@ -119,16 +119,9 @@ var config_data = `
       "code": "tps",
       "type": "counter"
     },
-    { "name": "Pickup From",
-      "code": "tpu",
-      "type": "radio",
-      "choices": {
-        "s": "Coral Station<br>",
-        "f": "Floor<br>",
-        "b": "Both<br>",
-        "x": "Not Attempted"
-      },
-      "defaultValue": "x"
+    { "name": "Used a floor pickup",
+      "code": "tfp",
+      "type": "bool"
     }
   ],
   "endgame": [
@@ -136,10 +129,9 @@ var config_data = `
       "code": "efs",
       "type":"radio",
       "choices": {
-        "bp": "Parked<br>",
-        "ba": "Parked/Failed Climb<br>",
-        "bs": "Shallow Cage<br>",
         "bd": "Deep Cage<br>",
+        "bs": "Shallow Cage<br>",
+        "bp": "Parked/Failed Climb<br>",
         "x": "Not attempted"
       },
       "defaultValue": "x"
@@ -167,7 +159,7 @@ var config_data = `
       "choices": {
         "e": "Very effective (no penalties)<br>",
         "g": "Average (but no penlaties)<br>",
-        "b": "Inneffective (or got penalties)<br>",
+        "b": "Ineffective (or got penalties)<br>",
         "x": "Did not play defense"
       },
       "defaultValue": "x"
