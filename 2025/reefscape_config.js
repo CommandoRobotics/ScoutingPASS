@@ -1,6 +1,6 @@
 var config_data = `
 {
-  "dataFormat": "tsv",
+  "dataFormat": "kvs",
   "title": "Scouting PASS 2025",
   "page_title": "REEFSCAPE",
   "checkboxAs": "10",
